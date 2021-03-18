@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 export default class Navbar extends Component {
+
+    
     render() {
         return (
             <div>
@@ -20,7 +22,20 @@ export default class Navbar extends Component {
                             <Link className="nav-link" to="/about">About</Link>
                             </li>
                             <li className="nav-item">
+                            <Link className="nav-link" to="/posts">Posts</Link>
+                            </li>
+                            <li className="nav-item">
                             <Link className="nav-link" to="/contact">Contact</Link>
+                            </li>
+                            <li className="nav-item">
+                            <Link className="nav-link" to="/cart">Cart</Link>
+                            </li>
+                            <li className="nav-item">
+                            <Link className="nav-link" to="/shop">
+                                Shop &nbsp;
+                                <span className="bg.light"><i className="fa fa-shopping-cart"></i> {this.props.cart.length} | ${this.props.sumCartProducts(this.props.cart)} </span>
+                            </Link>
+                            
                             </li>
                         </ul>
                         </div>
